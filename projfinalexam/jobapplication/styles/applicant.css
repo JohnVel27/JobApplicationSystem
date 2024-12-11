@@ -1,0 +1,439 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: rgb(24, 24, 24);
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: rgb(36, 36, 36);
+    color: #ddd;
+}
+
+.profile {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile h4 {
+    margin: 5px 0 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li:hover {
+    background-color: rgb(36, 36, 36);
+}
+
+.main-content {
+    margin-left: 250px; /* Adjust for the sidebar width */
+    padding: 20px;
+    background-color: #f8f9fa;
+    height: 100vh;
+    color: #333;
+    width: calc(100% - 250px); /* Ensures it takes up remaining width */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.job-listing-container {
+    width: 100%; /* Make sure container takes full width */
+    padding: 0 20px;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center; /* Ensures the button and input are vertically aligned */
+    justify-content: center; /* Centers the search bar within its container */
+    margin-bottom: 20px;
+    gap: 10px; /* Adds consistent spacing between the input and the button */
+}
+
+.search-bar input[type="text"] {
+    flex: 1; /* Allows the input field to take up most of the space */
+    max-width: 600px; /* Optional: Limits the input field's maximum width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Ensures the text inside the button doesn’t wrap */
+}
+
+.search-bar button:hover {
+    background-color: #004494;
+}
+
+
+.job-list {
+    list-style: none;
+    padding: 0;
+}
+
+.job-item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.job-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #007bff;
+}
+
+.job-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+.header {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-container {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.approval-section {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.approval-header {
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.not-approved {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.badge-status {
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+}
+
+.badge-approved {
+    background-color: #28a745;
+    color: white;
+}
+
+.badge-not-approved {
+    background-color: #dc3545;
+    color: white;
+}
+:root {
+--white: #fff;
+--black: #000;
+--bg: #f4f4f9;
+--grey: #888;
+--light: #ddd;
+--dark: #444;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+background-color: var(--bg);
+}
+
+.container {
+display: flex;
+height: 100vh;
+width: 100%;
+}
+
+.left {
+width: 30%;
+background: var(--white);
+border-right: 1px solid var(--light);
+overflow-y: auto;
+}
+
+.top input {
+width: 90%;
+padding: 10px;
+margin: 10px;
+border: 1px solid var(--light);
+border-radius: 5px;
+}
+
+.people {
+padding: 10px;
+}
+
+.person {
+padding: 15px;
+border-bottom: 1px solid var(--light);
+cursor: pointer;
+display: flex;
+flex-direction: column;
+}
+
+.person .name {
+font-weight: bold;
+color: var(--dark);
+}
+
+.person .time {
+font-size: 12px;
+color: var(--grey);
+}
+
+.person:hover {
+background: var(--light);
+}
+
+.right {
+width: 70%;
+display: flex;
+flex-direction: column;
+position: relative;
+}
+
+.chat {
+flex: 1;
+padding: 20px;
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+}
+
+.bubble {
+padding: 10px 15px;
+margin: 10px;
+border-radius: 20px;
+max-width: 60%;
+}
+
+.you {
+background: var(--light);
+align-self: flex-start;
+}
+
+.me {
+background: var(--dark);
+color: var(--white);
+align-self: flex-end;
+}
+
+.write {
+padding: 10px;
+border-top: 1px solid var(--light);
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+textarea {
+flex: 1;
+height: 40px;
+border: 1px solid var(--light);
+border-radius: 5px;
+padding: 5px;
+resize: none;
+}
+
+.send {
+padding: 10px 20px;
+background: var(--dark);
+color: var(--white);
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+/* Style for the Apply Now button */
+.view-btn {
+background-color: #4CAF50; /* Green background */
+color: white; /* White text color */
+padding: 10px 20px; /* Padding around the text */
+border: none; /* Remove default border */
+cursor: pointer; /* Change cursor to pointer on hover */
+font-size: 14px; /* Font size */
+border-radius: 5px; /* Rounded corners */
+margin-top: 10px; /* Space between job details and button */
+transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+}
+
+/* Hover effect for the Apply Now button */
+.view-btn:hover {
+background-color: #45a049; /* Darker green when hovered */
+}
+
+/* Modal overlay (background) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 600px;
+}
+
+.close-btn {
+background-color: red;
+color: white;
+padding: 10px;            /* Adjust padding for height and button appearance */
+font-size: 16px;          /* Make the text size bigger */
+border: none;
+cursor: pointer;
+border-radius: 5px;       /* Rounded corners */
+position: absolute;       /* Position relative to the modal */
+right: 10px;              /* Position from the right side of the modal */
+top: 10px;                /* Position from the top to create some space */
+transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+background-color: darkred;
+}
+
+
+
+
+/* Apply Now button inside the modal */
+.apply-btn {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: darkgreen;
+}
+/* Job Application Form Styling */
+.job-form-container {
+    display: none;
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+

@@ -1,0 +1,61 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+.form-group p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 14px;
+}
+.btn-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    gap: 20px; /* Adjust the gap as needed */
+}
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btn.download {
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.btn.accept {
+    background-color: #28a745;
+    color: white;
+}
+.btn.decline {
+    background-color: #dc3545;
+    color: white;
+}
+.btn:hover {
+    opacity: 0.9;
+}
